@@ -1,0 +1,5 @@
+Step	Before	After	Removed
+Genotyping_rate	279	163	116
+HWE_controls	163	163	0
+MAC_gt_1	163	34	129
+MAF_lt_0.01	34	33	1

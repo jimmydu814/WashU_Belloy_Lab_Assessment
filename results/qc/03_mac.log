@@ -1,0 +1,28 @@
+PLINK v2.0.0-a.7.11LM AVX2 Intel (1 Oct 2026)
+Options in effect:
+  --mac 2
+  --make-pgen
+  --out results/qc/03_mac
+  --pfile results/qc/02_hwe
+
+Hostname: DESKTOP-V5M4HGF
+Working directory: /mnt/c/Users/jimmy/Documents/GitHub/WashU-Belloy-Lab-Interview
+Start time: Tue Oct  6 16:36:43 2026
+
+Random number seed: 1791329803
+15571 MiB RAM detected, ~14859 available; reserving 7785 MiB for main
+workspace.
+Using up to 12 threads (change this with --threads).
+10481 samples (0 females, 0 males, 10481 ambiguous; 10481 founders) loaded from
+results/qc/02_hwe.psam.
+163 variants loaded from results/qc/02_hwe.pvar.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+129 variants removed due to allele frequency threshold(s)
+(--maf/--max-maf/--mac/--max-mac).
+34 variants remaining after main filters.
+Writing results/qc/03_mac.psam ... done.
+Writing results/qc/03_mac.pvar ... done.
+Writing results/qc/03_mac.pgen ... done.
+
+End time: Tue Oct  6 16:36:43 2026

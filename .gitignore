@@ -1,0 +1,18 @@
+# Raw and derived genotype data
+data/*
+!data/README.md
+
+*.vcf
+*.vcf.gz
+*.bcf
+
+*.pgen
+*.pvar
+*.psam
+
+*.bed
+*.bim
+*.fam
+
+*.snplist
+*.keep

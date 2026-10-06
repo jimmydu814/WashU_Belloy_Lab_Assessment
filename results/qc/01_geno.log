@@ -1,0 +1,27 @@
+PLINK v2.0.0-a.7.11LM AVX2 Intel (1 Oct 2026)
+Options in effect:
+  --geno 0.1
+  --make-pgen
+  --out results/qc/01_geno
+  --pfile results/qc/00_raw
+
+Hostname: DESKTOP-V5M4HGF
+Working directory: /mnt/c/Users/jimmy/Documents/GitHub/WashU-Belloy-Lab-Interview
+Start time: Tue Oct  6 16:36:43 2026
+
+Random number seed: 1791329803
+15571 MiB RAM detected, ~14858 available; reserving 7785 MiB for main
+workspace.
+Using up to 12 threads (change this with --threads).
+10481 samples (0 females, 0 males, 10481 ambiguous; 10481 founders) loaded from
+results/qc/00_raw.psam.
+279 variants loaded from results/qc/00_raw.pvar.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+--geno: 116 variants removed due to missing genotype data.
+163 variants remaining after main filters.
+Writing results/qc/01_geno.psam ... done.
+Writing results/qc/01_geno.pvar ... done.
+Writing results/qc/01_geno.pgen ... done.
+
+End time: Tue Oct  6 16:36:43 2026

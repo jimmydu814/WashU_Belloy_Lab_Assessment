@@ -1,0 +1,19 @@
+PLINK v2.0.0-a.7.11LM AVX2 Intel (1 Oct 2026)
+Options in effect:
+  --out results/qc/02_hwe_pass
+  --pfile results/qc/02_hwe_controls
+  --write-snplist
+
+Hostname: DESKTOP-V5M4HGF
+Working directory: /mnt/c/Users/jimmy/Documents/GitHub/WashU-Belloy-Lab-Interview
+Start time: Tue Oct  6 16:36:43 2026
+
+Random number seed: 1791329803
+15571 MiB RAM detected, ~14855 available; reserving 7785 MiB for main
+workspace.
+Using up to 12 threads (change this with --threads).
+163 variants loaded from results/qc/02_hwe_controls.pvar.
+Note: No phenotype data present.
+--write-snplist: Variant IDs written to results/qc/02_hwe_pass.snplist .
+
+End time: Tue Oct  6 16:36:43 2026
