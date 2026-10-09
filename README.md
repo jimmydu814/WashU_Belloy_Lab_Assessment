@@ -35,12 +35,14 @@ All supplied covariates will be included in the final SKAT-O model.
 
 The analysis is being performed in WSL/Linux using:
 
-- PLINK 2
-- bcftools
-- Bash
-- Ensembl VEP
-- R
-- SKAT R package
+- Operating system: Ubuntu 22.04 LTS (WSL2)
+- PLINK 2 - v2.0.0-a.7.11LM
+- bcftools - 1.13
+- Bash - 5.1.16
+- Ensembl VEP - release 116
+- R - 4.1.2
+- SKAT R package - 2.2.5
+- ChatGPT (GPT-5.6 Sol) — used for coding assistance, workflow troubleshooting, and documentation support
 
 ## Input Data Inspection
 
@@ -60,11 +62,11 @@ The following were checked:
 - Variant coordinates and alleles
 - Genome build information
 
-The VCF header did not explicitly specify the reference genome build.
+The VCF header did not explicitly specify the reference genome build, but it was confirmed to be GRCh38.
 
 Script: 01_inspect_vcf.sh
 
-Commend used:
+Command used:
 
 ```bash
 bash scripts/01_inspect_vcf.sh data/WES_TREM2_5k_boundaries_raw.vcf.gz | tee results/vcf_inspection.txt
@@ -85,10 +87,13 @@ VCF and covariate sample identifiers were found to be consistent.
 
 Script: 01b_inspect_covariates.sh
 
-Commend used:
+Command used:
 
 ```bash
-bash scripts/01b_inspect_covaraites.sh data/covariates.txt | tee covariates_inspection.txt
+bash bash scripts/01b_inspect_covariates.sh \
+    data/covariates.txt \
+    data/WES_TREM2_5k_boundaries_raw.vcf.gz \
+    | tee results/covariates_inspection.txt
 ```
 ## Variant Quality Control
 
@@ -106,7 +111,7 @@ at each stage could be documented.
 
 Script: 02_plink_qc.sh
 
-Commend used:
+Command used:
 ```bash
 bash scripts/02_plink_qc.sh data/WES_TREM2_5k_boundaries_raw.vcf.gz data/covariates.txt results/qc
 ```
@@ -125,6 +130,8 @@ quality control.
 
 ### Export Final QC Variants to VCF
 
+Command used:
+
 ```bash
 plink2 \
     --pfile results/qc/04_final \
@@ -135,7 +142,7 @@ plink2 \
 ## Variant Annotation with Ensembl VEP
 
 After PLINK QC, 33 variants remained in the final dataset. The filtered PLINK dataset was exported to VCF format and annotated using Ensembl Variant Effect Predictor (VEP) release 116 with the GRCh38 cache.
-VEP commend:
+VEP Command:
 ```bash
 ~/ensembl-vep/vep \
     --input_file results/qc/04_final.vcf.gz \
@@ -159,7 +166,7 @@ VEP annotations were filtered to keep only TREM2 transcript annotations. Variant
 
 Script: 03_filter_vep.sh
 
-Commend used: 
+Command used: 
 ```bash
 bash scripts/03_filter_vep.sh \
     results/vep/vep_annotations.tsv \
@@ -193,12 +200,15 @@ DX ~ sex + final_APOE4d + final_APOE2d + PC1 + PC2 + PC3 + PC4 + PC5
 Results(`results/skat/skato_results.tsv`):
 | Variant category | Number of variants included | P-value |
 |---|---:|---:|
-| LoF | 3 | 1.987 × 10^-14 |
+| LoF | 3 | 1.987 × 10^-1 |
 | Missense | 16 | 1.594 × 10^-12 |
+
+Interpretation:
+SKAT-O testing included 10,481 subjects (5,519 Alzheimer’s disease cases and 4,962 controls), adjusting for all supplied covariates: sex, APOE ε4 dosage, APOE ε2 dosage, and PC1–PC5. The 16 missense variants showed strong evidence of association with Alzheimer’s disease status (P = 1.594 × 10⁻¹²). The 3 loss-of-function variants did not show statistically significant evidence of association (P = 0.1987). This shows strong association between TREM2 missense variants and AD. For TREM2 LoF variants, since there were only three variants, it may have limited statistical power. So the nonsignificant results do not rule out association.
 
 Scripts: 05_run_skato.R
 
-Commend used:
+Command used:
 
 ```bash
 Rscript scripts/05_run_skato.R \

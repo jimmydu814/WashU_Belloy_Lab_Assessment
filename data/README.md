@@ -9,3 +9,4 @@ data/
 ├── WES_TREM2_5k_boundaries_raw.vcf.gz
 ├── covariates.txt
 └── README.md
+```

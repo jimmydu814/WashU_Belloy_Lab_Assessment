@@ -31,6 +31,7 @@ results/qc/
 ├── 02_hwe.log
 ├── 03_mac.log
 └── 04_final.log
+```
 
 `qc_summary.tsv` records the number of variants before and after each
 PLINK QC step. The PLINK log files are retained to document the commands,
@@ -45,16 +46,14 @@ classification are retained:
 results/vep/
 ├── trem2_variant_classes.tsv
 ├── trem2_lof_variants.txt
-└── trem2_missense_variants.txt
+├── trem2_missense_variants.txt
+└── vep_annotations.tsv
 ```
 
 `trem2_variant_classes.tsv` records the final functional classification
 for each unique TREM2 variant. The LoF and missense variant lists contain
-the variants used for the corresponding SKAT-O tests.
-
-The full VEP annotation table and other intermediate annotation files are
-not retained in GitHub because they can be regenerated from the analysis
-scripts and input data.
+the variants used for the corresponding SKAT-O tests. `vep_annotations.tsv` 
+contains full vep annotation table.
 
 ## Retained SKAT-O Outputs
 
