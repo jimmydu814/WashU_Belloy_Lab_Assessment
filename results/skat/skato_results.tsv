@@ -1,0 +1,3 @@
+Category	Input_variants	Tested_variants	P_value	Total_MAC	Carriers
+LoF	3	3	0.198708608061841	24	24
+Missense	16	16	1.59403045384798e-12	255	252

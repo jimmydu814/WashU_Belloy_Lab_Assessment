@@ -1,0 +1,2 @@
+DX ~ sex + final_APOE4d + final_APOE2d + PC1 + PC2 + PC3 + PC4 + 
+    PC5

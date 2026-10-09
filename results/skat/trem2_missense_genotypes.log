@@ -1,0 +1,21 @@
+PLINK v2.0.0-a.7.11LM AVX2 Intel (1 Oct 2026)
+Options in effect:
+  --export A
+  --out results/skat/trem2_missense_genotypes
+  --pfile results/skat/trem2_missense
+
+Hostname: DESKTOP-V5M4HGF
+Working directory: /mnt/c/Users/jimmy/Documents/GitHub/WashU-Belloy-Lab-Interview
+Start time: Thu Oct  8 13:29:22 2026
+
+Random number seed: 1791491362
+15571 MiB RAM detected, ~14885 available; reserving 7785 MiB for main
+workspace.
+Using up to 12 threads (change this with --threads).
+10481 samples (0 females, 0 males, 10481 ambiguous; 10481 founders) loaded from
+results/skat/trem2_missense.psam.
+16 variants loaded from results/skat/trem2_missense.pvar.
+Note: No phenotype data present.
+--export A: results/skat/trem2_missense_genotypes.raw written.
+
+End time: Thu Oct  8 13:29:22 2026

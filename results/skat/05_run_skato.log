@@ -1,0 +1,41 @@
+Covariates included in null model:
+[1] "sex"          "final_APOE4d" "final_APOE2d" "PC1"          "PC2"         
+[6] "PC3"          "PC4"          "PC5"         
+
+Subjects with genotype + covariate data: 10481 
+Subjects after removing missing phenotype/covariates: 10481 
+Variants converted to minor-allele coding: 3 of 3 
+Variants converted to minor-allele coding: 16 of 16 
+
+LoF variants: 3 
+Missense variants: 16 
+
+SKAT null model:
+DX ~ sex + final_APOE4d + final_APOE2d + PC1 + PC2 + PC3 + PC4 + 
+    PC5
+
+Running LoF SKAT-O...
+Warning messages:
+1: The missing genotype rate is 0.025475. Imputation is applied. 
+2: The missing genotype rate is 0.025475. Imputation is applied. 
+Running missense SKAT-O...
+Warning messages:
+1: The missing genotype rate is 0.016524. Imputation is applied. 
+2: The missing genotype rate is 0.016524. Imputation is applied. 
+
+========================================
+SKAT-O RESULTS
+========================================
+
+  Category Input_variants Tested_variants      P_value Total_MAC Carriers
+1      LoF              3               3 1.987086e-01        24       24
+2 Missense             16              16 1.594030e-12       255      252
+
+Model:
+DX ~ sex + final_APOE4d + final_APOE2d + PC1 + PC2 + PC3 + PC4 + 
+    PC5
+
+Results saved to:
+results/skat/skato_results.tsv 
+
+

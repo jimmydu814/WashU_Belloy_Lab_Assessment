@@ -1,28 +1,21 @@
 PLINK v2.0.0-a.7.11LM AVX2 Intel (1 Oct 2026)
 Options in effect:
-  --make-pgen
-  --max-maf 0.01
+  --export vcf bgz
   --out results/qc/04_final
-  --pfile results/qc/03_mac
+  --pfile results/qc/04_final
 
 Hostname: DESKTOP-V5M4HGF
 Working directory: /mnt/c/Users/jimmy/Documents/GitHub/WashU-Belloy-Lab-Interview
-Start time: Tue Oct  6 16:36:43 2026
+Start time: Thu Oct  8 12:46:21 2026
 
-Random number seed: 1791329803
-15571 MiB RAM detected, ~14859 available; reserving 7785 MiB for main
+Random number seed: 1791488781
+15571 MiB RAM detected, ~14899 available; reserving 7785 MiB for main
 workspace.
 Using up to 12 threads (change this with --threads).
 10481 samples (0 females, 0 males, 10481 ambiguous; 10481 founders) loaded from
-results/qc/03_mac.psam.
-34 variants loaded from results/qc/03_mac.pvar.
+results/qc/04_final.psam.
+33 variants loaded from results/qc/04_final.pvar.
 Note: No phenotype data present.
-Calculating allele frequencies... done.
-1 variant removed due to allele frequency threshold(s)
-(--maf/--max-maf/--mac/--max-mac).
-33 variants remaining after main filters.
-Writing results/qc/04_final.psam ... done.
-Writing results/qc/04_final.pvar ... done.
-Writing results/qc/04_final.pgen ... done.
+--export vcf bgz to results/qc/04_final.vcf.gz ... done.
 
-End time: Tue Oct  6 16:36:43 2026
+End time: Thu Oct  8 12:46:21 2026
